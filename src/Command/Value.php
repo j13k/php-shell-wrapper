@@ -33,7 +33,7 @@ abstract class Value
     {
         $values = array_map('escapeshellarg', $this->values);
         $prefix = sprintf('%s%s ', static::PREFIX, $this->name);
-        return $prefix . join(" ${prefix}", $values);
+        return $prefix . join(" {$prefix}", $values);
     }
 
     public function getName(): string
